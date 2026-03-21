@@ -4,7 +4,7 @@
 static const char font[]        = "Mononoki Nerd Font:size=9";
 static const char* normbgcolor  = "#282a36";
 static const char* normfgcolor  = "#cccccc";
-static const char* selbgcolor   = "#924441";
+static const char* selbgcolor   = "#005577";
 static const char* selfgcolor   = "#ffffff";
 static const char* urgbgcolor   = "#111111";
 static const char* urgfgcolor   = "#cc0000";
@@ -60,8 +60,7 @@ static Key keys[] = {
 	{ MODKEY,               XK_8,      move,        { .i = 7 } },
 	{ MODKEY,               XK_9,      move,        { .i = 8 } },
 	{ MODKEY,               XK_0,      move,        { .i = 9 } },
-
-	{ MODKEY|Mod1Mask,      XK_q,      killclient,  { 0 } },
+	{ MODKEY,               XK_q,      killclient,  { 0 } },
 
 	{ MODKEY,               XK_u,      focusurgent, { 0 } },
 	{ MODKEY|Mod1Mask,      XK_u,      toggle,      { .v = (void*) &urgentswitch } },
