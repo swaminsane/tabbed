@@ -1,7 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 #include "/home/swaminsane/.config/theme/colors.h"
+#include "/home/swaminsane/.config/theme/fonts.h"
 /* appearance */
-static const char font[] = "Terminus:size=7";
+static const char font[] = "Terminus:style=Bold:size=13";
 static const char *normbgcolor = COL_BG;
 static const char *normfgcolor = COL_FG;
 static const char *selbgcolor = COL_ACCENT;
@@ -11,7 +12,7 @@ static const char *urgfgcolor = COL_RED;
 static const char before[] = "<";
 static const char after[] = ">";
 static const char titletrim[] = "...";
-static const int tabwidth = 150;
+static const int tabwidth = 210;
 static const Bool foreground = True;
 static Bool urgentswitch = False;
 
@@ -45,10 +46,10 @@ static Key keys[] = {
     {Mod1Mask, XK_Return, focusonce, {0}},
     {Mod1Mask, XK_Return, spawn, {0}},
 
-    {MODKEY | Mod1Mask, XK_l, rotate, {.i = +1}},
-    {MODKEY | Mod1Mask, XK_h, rotate, {.i = -1}},
-    {MODKEY | Mod1Mask, XK_j, movetab, {.i = -1}},
-    {MODKEY | Mod1Mask, XK_k, movetab, {.i = +1}},
+    {Mod1Mask, XK_l, rotate, {.i = +1}},
+    {Mod1Mask, XK_h, rotate, {.i = -1}},
+    {Mod1Mask, XK_j, movetab, {.i = -1}},
+    {Mod1Mask, XK_k, movetab, {.i = +1}},
 
     {Mod1Mask, XK_Right, rotate, {.i = +1}},
     {Mod1Mask, XK_Left, rotate, {.i = -1}},
@@ -69,7 +70,7 @@ static Key keys[] = {
     {MODKEY, XK_9, move, {.i = 8}},
     {MODKEY, XK_0, move, {.i = 9}},
     {MODKEY, XK_q, killclient, {0}},
-    {Mod1Mask, XK_End, killclient, {0}},
+    {Mod1Mask, XK_q, killclient, {0}},
 
     {MODKEY, XK_u, focusurgent, {0}},
     {MODKEY | Mod1Mask, XK_u, toggle, {.v = (void *)&urgentswitch}},
