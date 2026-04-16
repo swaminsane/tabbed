@@ -212,6 +212,11 @@ void buttonpress(const XEvent *e) {
         arg.i = ev->button == Button4 ? -1 : 1;
         rotate(&arg);
         break;
+      case 6: /* FALLTHROUGH */
+      case 7:
+        arg.i = ev->button == 6 ? -1 : 1;
+        rotate(&arg);
+        break;
       }
       break;
     }
